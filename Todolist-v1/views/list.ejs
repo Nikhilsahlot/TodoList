@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <link href="styles.css" rel="stylesheet" >
+  </head>
+   <body>
+  <div class="box" id="heading">
+    <h1 style="font-size: 2rem;"><%=listTitle%></h1>
+     </div>
+ <div class="box">
+<%for(var i=0;i<EJS1.length;i++){%>
+        <div class="item">
+            <input type="checkbox">
+     <p><%=EJS1[i]%></p>
+     </div>
+    <%}%>
+   <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="Enter item" autocomplete="off" />
+      <button type="submit" name="list" value=<%= listTitle %>>+</button>
+    </form>
+ </div>
+    
+   <footer>@2022</footer>
+  </body>
+</html>
